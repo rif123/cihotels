@@ -52,12 +52,6 @@
 							<div class="form-group">
 							  <div class="row">
 								<div class="col-md-3 pull-right">
-								<select name="ecategory_id" class="form-control" onchange="this.form.submit();">
-									<option value="">--<?php echo lang('filter_by_expenses_category');?>--</option>
-									<?php foreach($ecategory as $rt){?>
-										<option value="<?php echo $rt->id?>" <?php echo ($rt->id==@$_POST['ecategory_id'])?'selected="selected"':''?> ><?php echo $rt->name?></option>
-									<?php } ?>
-								</select>
 								</div>
 							  </div>		
 							</div>

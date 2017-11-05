@@ -55,7 +55,9 @@ Class Homepage_model extends CI_Model
 				$this->db->where('id', $id);
 		return $this->db->get('room_types')->row();
     }
-	
+	function getBuilding(){
+        return 	$this->db->get('building')->result();	
+    }
 	function get_room_types_all()
     {
 			   $this->db->order_by('title', 'ASC');	

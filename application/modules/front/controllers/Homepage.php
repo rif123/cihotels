@@ -15,7 +15,8 @@ class Homepage extends Front_Controller {
 		$data['banners']		= $this->homepage_model->get_banners();
 		$data['testimonials']	= $this->homepage_model->get_testimonials();	// get 6 testimonials
 		$data['room_types']		= $this->homepage_model->get_room_types();
-		$data['coupons']		= $this->homepage_model->get_coupons();		
+		$data['coupons']		= $this->homepage_model->get_coupons();	
+		$data['listBuilding']		= $this->homepage_model->getBuilding();	
 		$this->render('homepage/homepage', $data);		
 	}
 	

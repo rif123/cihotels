@@ -48,8 +48,7 @@
 											$CI->db->select('R.*,');
 											$CI->db->join('orders O', 'O.id = R.order_id', 'LEFT');
 							$orders	  	=	$CI->db->get('rel_orders_prices R')->result_array();
-							// echo '<pre>'; print_r($orders);die;
-						
+							// echo '<pre>'; print_r($this->db->last_query());die;
 							if($total_rooms > 0){
 								//echo count($orders);die;
 								if(count($orders) >= $total_rooms){
@@ -263,6 +262,14 @@ return;
 		$CI =& get_instance();
 		$CI->db->where('R.room_type_id',$room_type_id);
 		return $CI->db->get('rooms R')->result_array();
+
+	}	
+	function checkBuilding($building, $room_type_id) {
+		$CI =& get_instance();
+		$CI->db->where('R.idGedung',$building);
+		$CI->db->where('R.room_type_id',$room_type_id);
+		return $CI->db->get('rooms R')->result_array();
+		
 
 	}	
 	

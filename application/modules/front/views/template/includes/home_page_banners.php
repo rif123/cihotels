@@ -39,6 +39,19 @@
         		<h3><span><?php echo lang('make_reservation')?></span></h3>
                 <form method="get" action="<?php echo site_url('front/book/index')?>">
             		<div class="reservation">
+
+                <div class="keywords">
+   							<select name="building" id="country2" onchange="change_country(this.value)" class="frm-field required">
+                    <option hidden="hidden">Gedung</option>
+                    <?php 
+                        foreach ($listBuilding as $key => $val) {
+                            echo "<option value='".$val->idBuilding."'>".$val->nameBuilding."</option>";
+                        }
+                    ?>
+                </select>
+    					</div>
+                        <br>
+                        
                         <div class="keywords">
    							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
    							<input type="text" class="datepicker1" name="date_from" placeholder="<?php echo lang('check_in');?>" value="<?php echo @$_GET['date_from']?>" required=" " />	
