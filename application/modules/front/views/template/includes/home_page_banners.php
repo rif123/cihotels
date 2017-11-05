@@ -42,7 +42,7 @@
 
                 <div class="keywords">
    							<select name="building" id="country2" onchange="change_country(this.value)" class="frm-field required">
-                    <option hidden="hidden">Gedung</option>
+                    <option hidden="hidden" value="">Gedung</option>
                     <?php 
                         foreach ($listBuilding as $key => $val) {
                             echo "<option value='".$val->idBuilding."'>".$val->nameBuilding."</option>";
