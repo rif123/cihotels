@@ -1,0 +1,15 @@
+.down_body
+nbproject
+protected/app/config
+uploads
+protected/app/storage
+.env
+appspec.yml
+env
+scripts/
+.idea
+Baca Dulu.txt
+db
+error.log
+license.txt
+!session/.gitkeep 
